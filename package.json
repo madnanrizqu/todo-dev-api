@@ -1,8 +1,9 @@
 {
   "name": "tododev-api",
   "scripts": {
-    "dev": "bun run --hot src/index.ts",
-    "build": "bun build src/index.ts --outdir ./build"
+    "dev": "NODE_ENV=development bun run --hot src/index.ts",
+    "build": "NODE_ENV=production bun build src/index.ts --outdir ./build",
+    "start": "NODE_ENV=production bun run ./build/index.js"
   },
   "dependencies": {
     "hono": "^4.4.10"

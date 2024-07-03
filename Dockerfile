@@ -7,6 +7,8 @@ COPY . .
 RUN bun install
 RUN bun run build
 
+ENV NODE_ENV production
+
 # run the app
 EXPOSE 3000
-ENTRYPOINT [ "bun", "run", "build/index.js" ]
+ENTRYPOINT [ "bun", "start" ]
